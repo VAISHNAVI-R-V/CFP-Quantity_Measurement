@@ -1,9 +1,7 @@
 package com.measurements;
 
-import java.util.Objects;
-
 /**
- * Purpose : To implement Quantity Measurement Program.
+ * @Purpose : To implement Quantity Measurement Program.
  *
  * @author VAISHNAVI VISHWAKARMA
  * @since 31-10-2021
