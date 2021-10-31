@@ -1,4 +1,7 @@
 package com.measurements;
+
+import java.util.Objects;
+
 /**
  * Purpose : To implement Quantity Measurement Program.
  *
@@ -6,8 +9,19 @@ package com.measurements;
  * @since 31-10-2021
  */
 public class Feet {
-    // Method to print welcome message
-    public void message() {
-        System.out.println("Welcome to Quantity Measurement Program");
+
+    private final double value;
+
+    public Feet(double value) {
+        this.value = value;
+    }
+
+    // generated override method.
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Feet feet = (Feet) o;
+        return Double.compare(feet.value, value) == 0;
     }
 }
