@@ -82,23 +82,29 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given_3FeetAnd1Yard_Compared_ShouldReturnEqualS() {
+    void given_3FeetAnd1Yard_Compared_ShouldReturnEquals() {
         Feet feet = new Feet(3.0);
         double actualResults = feet.feetTOYard();
         Assertions.assertEquals(1, actualResults);
     }
 
     @Test
-    void given_1FeetAnd1Yard_Compared_ShouldReturnNotEqualS() {
+    void given_1FeetAnd1Yard_Compared_ShouldReturnNotEquals() {
         Feet feet = new Feet(1.0);
         double actualResults = feet.feetTOYard();
         Assertions.assertNotEquals(1, actualResults);
     }
 
     @Test
-    void given_36InchAnd1Yard_WhenCompared_ShouldReturnEqual() {
+    void given_36InchAnd1Yard_Compared_ShouldReturnEquals() {
         Inch inch = new Inch(36.0);
         double actualResults = inch.inchToYard();
         Assertions.assertEquals(1, actualResults);
+    }
+    @Test
+    void given_1InchAnd1Yard_Compared_ShouldReturnNotEquals() {
+        Inch inch = new Inch(1.0);
+        double actualResults = inch.inchToYard();
+        Assertions.assertNotEquals(1, actualResults);
     }
 }
