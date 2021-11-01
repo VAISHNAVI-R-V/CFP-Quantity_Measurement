@@ -3,9 +3,8 @@ package com.measurements;
 import java.util.Objects;
 
 /**
- * @Purpose : To implement Quantity Measurement Program.
- *
  * @author VAISHNAVI VISHWAKARMA
+ * @Purpose : To implement Quantity Measurement Program.
  * @since 31-10-2021
  */
 public class Feet {
@@ -26,12 +25,17 @@ public class Feet {
     }
 
     /**
-     *
-     * @return 0
+     * @return value
      */
     public double feetToInch() {
         return value * 12;
     }
 
-
+    /**
+     *
+     * @return value
+     */
+    public double feetTOYard() {
+        return value / 3;
+    }
 }

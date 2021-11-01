@@ -80,4 +80,12 @@ public class QuantityMeasurementTest {
         double actualResults = feet.feetToInch();
         Assertions.assertEquals(12, actualResults);
     }
+
+    @Test
+    void given_3FeetAnd1Yard_Compared_ShouldReturnEqualS() {
+        Feet feet = new Feet(3.0);
+        double actualResults = feet.feetTOYard();
+        Assertions.assertEquals(1, actualResults);
+
+    }
 }
