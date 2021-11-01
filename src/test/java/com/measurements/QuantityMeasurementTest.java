@@ -38,4 +38,39 @@ public class QuantityMeasurementTest {
         Feet feet2 = new Feet(1.0);
         Assertions.assertNotEquals(feet1, feet2);
     }
+
+    @Test
+    void given_0InchAnd0Inch_ShouldReturnEquals() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(0.0);
+        Assertions.assertEquals(inch1, inch2);
+    }
+
+    @Test
+    void given_0InchAnd1Inch_ShouldReturnNotEquals() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = null;
+        Assertions.assertNotEquals(inch1, null);
+    }
+
+    @Test
+    void given_0InchAndReference1Inch_ShouldReturnNotEquals() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(1.0);
+        Assertions.assertNotEquals(inch1, inch2);
+    }
+
+    @Test
+    void given_Type0InchAndInch_ShouldReturnEquals() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(1.0);
+        Assertions.assertEquals(inch1.getClass(), inch2.getClass());
+    }
+
+    @Test
+    void given_Value0InchAnd1Inch_ShouldReturnNotEquals() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(1.0);
+        Assertions.assertNotEquals(inch1, inch2);
+    }
 }
