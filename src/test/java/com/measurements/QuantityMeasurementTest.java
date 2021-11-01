@@ -86,6 +86,13 @@ public class QuantityMeasurementTest {
         Feet feet = new Feet(3.0);
         double actualResults = feet.feetTOYard();
         Assertions.assertEquals(1, actualResults);
-
     }
+
+    @Test
+    void given_1FeetAnd1Yard_Compared_ShouldReturnNotEqualS() {
+        Feet feet = new Feet(1.0);
+        double actualResults = feet.feetTOYard();
+        Assertions.assertNotEquals(1, actualResults);
+    }
+
 }
