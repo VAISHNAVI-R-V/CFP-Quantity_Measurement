@@ -30,7 +30,7 @@ public class Feet {
      * @return 0
      */
     public double feetToInch() {
-        return 0;
+        return value * 12;
     }
 
 
