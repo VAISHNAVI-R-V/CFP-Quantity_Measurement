@@ -1,5 +1,7 @@
 package com.measurements;
 
+import java.util.Objects;
+
 /**
  * @Purpose : To implement Quantity Measurement Program.
  *
@@ -22,4 +24,14 @@ public class Feet {
         Feet feet = (Feet) o;
         return Double.compare(feet.value, value) == 0;
     }
+
+    /**
+     *
+     * @return 0
+     */
+    public double feetToInch() {
+        return 0;
+    }
+
+
 }
