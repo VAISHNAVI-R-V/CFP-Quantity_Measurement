@@ -107,4 +107,11 @@ public class QuantityMeasurementTest {
         double actualResults = inch.inchToYard();
         Assertions.assertNotEquals(1, actualResults);
     }
+
+    @Test
+    void given_1YardAnd3Feet_Compared_ShouldReturnEquals() {
+        Yard yard = new Yard(1.0);
+        double actualResult = yard.yardToFeet();
+        Assertions.assertEquals(3, actualResult);
+    }
 }

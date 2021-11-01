@@ -21,4 +21,8 @@ public class Yard {
         Yard yard = (Yard) o;
         return Double.compare(yard.value, value) == 0;
     }
+
+    public double yardToFeet() {
+        return value * 3;
+    }
 }
