@@ -94,11 +94,11 @@ public class QuantityMeasurementTest {
         double actualResults = feet.feetTOYard();
         Assertions.assertNotEquals(1, actualResults);
     }
-    @Test
-    void given_1YardAnd36Inch_Compared_ShouldReturnEqual() {
-        Yard yard = new Yard(1.0);
-        double actualResults = yard.yardToInch();
-        Assertions.assertEquals(36, actualResults);
-    }
 
+    @Test
+    void given_36InchAnd1Yard_WhenCompared_ShouldReturnEqual() {
+        Inch inch = new Inch(36.0);
+        double actualResults = inch.inchToYard();
+        Assertions.assertEquals(1, actualResults);
+    }
 }

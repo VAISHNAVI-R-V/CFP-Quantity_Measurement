@@ -17,4 +17,10 @@ public class Inch {
         return Double.compare(inch.value, value) == 0;
     }
 
+    /**
+     * @return value
+     */
+    public double inchToYard() {
+        return value / 36;
+    }
 }
