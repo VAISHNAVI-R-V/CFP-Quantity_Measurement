@@ -165,4 +165,40 @@ public class QuantityMeasurementTest {
         boolean compareCheck = centimeter.compare(inch);
         Assertions.assertTrue(compareCheck);
     }
+
+    @Test
+    void given_2InchAnd2Inch_WhenAdded_ShouldReturn4Inch() {
+        UnitMeasurementSystem inch1 = new UnitMeasurementSystem(2.0, Length.INCH);
+        UnitMeasurementSystem inch2 = new UnitMeasurementSystem(2.0, Length.INCH);
+        UnitMeasurementSystem actualValue = inch1.add(inch2, Length.INCH);
+        UnitMeasurementSystem expectedValue = new UnitMeasurementSystem(4.0, Length.INCH);
+        Assertions.assertEquals(actualValue, expectedValue);
+    }
+
+    @Test
+    void given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch() {
+        UnitMeasurementSystem feet = new UnitMeasurementSystem(1.0, Length.FEET);
+        UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
+        UnitMeasurementSystem actualValue = feet.add(inch, Length.INCH);
+        UnitMeasurementSystem expectedValue = new UnitMeasurementSystem(14.0, Length.INCH);
+        Assertions.assertEquals(expectedValue, actualValue);
+    }
+
+    @Test
+    void given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch() {
+        UnitMeasurementSystem feet1 = new UnitMeasurementSystem(1.0, Length.FEET);
+        UnitMeasurementSystem feet2 = new UnitMeasurementSystem(1.0, Length.FEET);
+        UnitMeasurementSystem actualValue = feet1.add(feet2, Length.INCH);
+        UnitMeasurementSystem expectedValue = new UnitMeasurementSystem(24.0, Length.INCH);
+        Assertions.assertEquals(expectedValue, actualValue);
+    }
+
+    @Test
+    void given2InchAnd2Point5Centimeter_WhenAdded_ShouldReturn3Inch() {
+        UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
+        UnitMeasurementSystem centimeter = new UnitMeasurementSystem(2.5, Length.CENTIMETER);
+        UnitMeasurementSystem actualValue = inch.add(centimeter, Length.INCH);
+        UnitMeasurementSystem expectedValue = new UnitMeasurementSystem(3.0, Length.INCH);
+        Assertions.assertEquals(expectedValue, actualValue);
+    }
 }
