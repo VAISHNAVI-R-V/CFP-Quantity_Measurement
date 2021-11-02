@@ -5,14 +5,14 @@ import org.junit.jupiter.api.Test;
 
 public class QuantityMeasurementTest {
     @Test
-    void given0FeetAnd0Feet_ShouldReturnEqual() {
+    void given_0FeetAnd0Feet_ShouldReturnEqual() {
         UnitMeasurementSystem feet1 = new UnitMeasurementSystem(0.0, Length.FEET);
         UnitMeasurementSystem feet2 = new UnitMeasurementSystem(0.0, Length.FEET);
         Assertions.assertEquals(feet1, feet2);
     }
 
     @Test
-    void given_0FeetAndNullFeet_ShouldReturnNotEqual() {
+    void given__0FeetAndNullFeet_ShouldReturnNotEqual() {
         UnitMeasurementSystem feet1 = new UnitMeasurementSystem(0.0, Length.FEET);
         UnitMeasurementSystem feet2 = null;
         Assertions.assertNotEquals(feet1, null);
@@ -120,5 +120,49 @@ public class QuantityMeasurementTest {
         UnitMeasurementSystem yard = new UnitMeasurementSystem(1.0, Length.YARD);
         boolean compareCheck = yard.compare(feet);
         Assertions.assertFalse(compareCheck);
+    }
+
+    @Test
+    void given_Value0CentimeterAnd1Centimeter_ShouldReturnNotEqual() {
+        UnitMeasurementSystem centimeter1 = new UnitMeasurementSystem(0.0, Length.CENTIMETER);
+        UnitMeasurementSystem centimeter2 = new UnitMeasurementSystem(1.0, Length.CENTIMETER);
+        Assertions.assertNotEquals(centimeter1, centimeter2);
+    }
+
+    @Test
+    void given_0CentimeterAndNullCentimeter_ShouldReturnNotEqual() {
+        UnitMeasurementSystem centimeter1 = new UnitMeasurementSystem(0.0, Length.CENTIMETER);
+        UnitMeasurementSystem centimeter2 = null;
+        Assertions.assertNotEquals(centimeter1, centimeter2);
+    }
+
+    @Test
+    void given_Reference0CentimeterAnd1Centimeter_ShouldReturnNotEqual() {
+        UnitMeasurementSystem centimeter1 = new UnitMeasurementSystem(0.0, Length.CENTIMETER);
+        UnitMeasurementSystem centimeter2 = new UnitMeasurementSystem(1.0, Length.CENTIMETER);
+        Assertions.assertNotEquals(centimeter1, centimeter2);
+    }
+
+    @Test
+    void given_Type0CentimeterAnd1Centimeter_ShouldReturnEqual() {
+        UnitMeasurementSystem centimeter1 = new UnitMeasurementSystem(0.0, Length.CENTIMETER);
+        UnitMeasurementSystem centimeter2 = new UnitMeasurementSystem(1.0, Length.CENTIMETER);
+        Assertions.assertEquals(centimeter1.getClass(), centimeter2.getClass());
+    }
+
+    @Test
+    void given_2InchAnd5Centimeter_WhenCompared_ShouldReturnEqualLength() {
+        UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
+        UnitMeasurementSystem centimeter = new UnitMeasurementSystem(5.0, Length.CENTIMETER);
+        boolean compareCheck = inch.compare(centimeter);
+        Assertions.assertTrue(compareCheck);
+    }
+
+    @Test
+    void given_5CentimeterAnd2Inch_WhenCompared_ShouldReturnEqualLength() {
+        UnitMeasurementSystem centimeter = new UnitMeasurementSystem(5.0, Length.CENTIMETER);
+        UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
+        boolean compareCheck = centimeter.compare(inch);
+        Assertions.assertTrue(compareCheck);
     }
 }
