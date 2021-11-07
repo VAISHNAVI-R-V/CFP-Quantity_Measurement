@@ -12,7 +12,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given__0FeetAndNullFeet_ShouldReturnNotEqual() {
+    void given_0FeetAndNullFeet_ShouldReturnNotEqual() {
         UnitMeasurementSystem feet1 = new UnitMeasurementSystem(0.0, Length.FEET);
         UnitMeasurementSystem feet2 = null;
         Assertions.assertNotEquals(feet1, null);
@@ -176,7 +176,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch() {
+    void given_1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch() {
         UnitMeasurementSystem feet = new UnitMeasurementSystem(1.0, Length.FEET);
         UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
         UnitMeasurementSystem actualValue = feet.add(inch, Length.INCH);
@@ -185,7 +185,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch() {
+    void given_1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch() {
         UnitMeasurementSystem feet1 = new UnitMeasurementSystem(1.0, Length.FEET);
         UnitMeasurementSystem feet2 = new UnitMeasurementSystem(1.0, Length.FEET);
         UnitMeasurementSystem actualValue = feet1.add(feet2, Length.INCH);
@@ -194,7 +194,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given2InchAnd2Point5Centimeter_WhenAdded_ShouldReturn3Inch() {
+    void given_2InchAnd2Point5Centimeter_WhenAdded_ShouldReturn3Inch() {
         UnitMeasurementSystem inch = new UnitMeasurementSystem(2.0, Length.INCH);
         UnitMeasurementSystem centimeter = new UnitMeasurementSystem(2.5, Length.CENTIMETER);
         UnitMeasurementSystem actualValue = inch.add(centimeter, Length.INCH);
@@ -203,112 +203,112 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given0GramAnd0Gram_ShouldReturnEqual() {
+    void given_0GramAnd0Gram_ShouldReturnEqual() {
         UnitMeasurementSystem gram1 = new UnitMeasurementSystem(0.0, Weight.GRAM);
         UnitMeasurementSystem gram2 = new UnitMeasurementSystem(0.0, Weight.GRAM);
         Assertions.assertEquals(gram1, gram2);
     }
 
     @Test
-    void givenValue0GramAnd1Gram_ShouldReturnNotEqual() {
+    void given_Value0GramAnd1Gram_ShouldReturnNotEqual() {
         UnitMeasurementSystem gram1 = new UnitMeasurementSystem(0.0, Weight.GRAM);
         UnitMeasurementSystem gram2 = new UnitMeasurementSystem(1.0, Weight.GRAM);
         Assertions.assertNotEquals(gram1, gram2);
     }
 
     @Test
-    void given0GramAndNullGram_ShouldReturnNotEqual() {
+    void given_0GramAndNullGram_ShouldReturnNotEqual() {
         UnitMeasurementSystem gram1 = new UnitMeasurementSystem(0.0, Weight.GRAM);
         UnitMeasurementSystem gram2 = null;
         Assertions.assertNotEquals(gram1, gram2);
     }
 
     @Test
-    void givenReference0GramAnd1Gram_ShouldReturnNotEqual() {
+    void given_Reference0GramAnd1Gram_ShouldReturnNotEqual() {
         UnitMeasurementSystem gram1 = new UnitMeasurementSystem(0.0, Weight.GRAM);
         UnitMeasurementSystem gram2 = new UnitMeasurementSystem(1.0, Weight.GRAM);
         Assertions.assertNotEquals(gram1, gram2);
     }
 
     @Test
-    void givenType0GramAnd1Gram_ShouldReturnEqual() {
+    void given_Type0GramAnd1Gram_ShouldReturnEqual() {
         UnitMeasurementSystem gram1 = new UnitMeasurementSystem(0.0, Weight.GRAM);
         UnitMeasurementSystem gram2 = new UnitMeasurementSystem(1.0, Weight.GRAM);
         Assertions.assertEquals(gram1.getClass(), gram2.getClass());
     }
 
     @Test
-    void given0KilogramAnd0Kilogram_ShouldReturnEqual() {
+    void given_0KilogramAnd0Kilogram_ShouldReturnEqual() {
         UnitMeasurementSystem kilogram1 = new UnitMeasurementSystem(0.0, Weight.KILOGRAM);
         UnitMeasurementSystem kilogram2 = new UnitMeasurementSystem(0.0, Weight.KILOGRAM);
         Assertions.assertEquals(kilogram1, kilogram2);
     }
 
     @Test
-    void givenValue0KilogramAnd1Kilogram_ShouldReturnNotEqual() {
+    void given_Value0KilogramAnd1Kilogram_ShouldReturnNotEqual() {
         UnitMeasurementSystem kilogram1 = new UnitMeasurementSystem(0.0, Weight.KILOGRAM);
         UnitMeasurementSystem kilogram2 = new UnitMeasurementSystem(1.0, Weight.KILOGRAM);
         Assertions.assertNotEquals(kilogram1, kilogram2);
     }
 
     @Test
-    void given0KilogramAndNullKilogram_ShouldReturnNotEqual() {
+    void given_0KilogramAndNullKilogram_ShouldReturnNotEqual() {
         UnitMeasurementSystem kilogram1 = new UnitMeasurementSystem(0.0, Weight.KILOGRAM);
         UnitMeasurementSystem kilogram2 = null;
         Assertions.assertNotEquals(kilogram1, kilogram2);
     }
 
     @Test
-    void givenReference0KilogramAnd1Kilogram_ShouldReturnNotEqual() {
+    void given_Reference0KilogramAnd1Kilogram_ShouldReturnNotEqual() {
         UnitMeasurementSystem kilogram1 = new UnitMeasurementSystem(0.0, Weight.KILOGRAM);
         UnitMeasurementSystem kilogram2 = new UnitMeasurementSystem(1.0, Weight.KILOGRAM);
         Assertions.assertNotEquals(kilogram1, kilogram2);
     }
 
     @Test
-    void givenType0KilogramAnd1Kilogram_ShouldReturnEqual() {
+    void given_Type0KilogramAnd1Kilogram_ShouldReturnEqual() {
         UnitMeasurementSystem kilogram1 = new UnitMeasurementSystem(0.0, Weight.KILOGRAM);
         UnitMeasurementSystem kilogram2 = new UnitMeasurementSystem(1.0, Weight.KILOGRAM);
         Assertions.assertEquals(kilogram1.getClass(), kilogram2.getClass());
     }
 
     @Test
-    void given0TonneAnd0Tonne_ShouldReturnEqual() {
+    void given_0TonneAnd0Tonne_ShouldReturnEqual() {
         UnitMeasurementSystem tonne1 = new UnitMeasurementSystem(0.0, Weight.TONNE);
         UnitMeasurementSystem tonne2 = new UnitMeasurementSystem(0.0, Weight.TONNE);
         Assertions.assertEquals(tonne1, tonne2);
     }
 
     @Test
-    void givenValue0TonneAnd1Tonne_ShouldReturnNotEqual() {
+    void given_Value0TonneAnd1Tonne_ShouldReturnNotEqual() {
         UnitMeasurementSystem tonne1 = new UnitMeasurementSystem(0.0, Weight.TONNE);
         UnitMeasurementSystem tonne2 = new UnitMeasurementSystem(1.0, Weight.TONNE);
         Assertions.assertNotEquals(tonne1, tonne2);
     }
 
     @Test
-    void given0TonneAndNullTonne_ShouldReturnNotEqual() {
+    void given_0TonneAndNullTonne_ShouldReturnNotEqual() {
         UnitMeasurementSystem tonne1 = new UnitMeasurementSystem(0.0, Weight.TONNE);
         UnitMeasurementSystem tonne2 = null;
         Assertions.assertNotEquals(tonne1, tonne2);
     }
 
     @Test
-    void givenReference0TonneAnd1Tonne_ShouldReturnNotEqual() {
+    void given_Reference0TonneAnd1Tonne_ShouldReturnNotEqual() {
         UnitMeasurementSystem tonne1 = new UnitMeasurementSystem(0.0, Weight.TONNE);
         UnitMeasurementSystem tonne2 = new UnitMeasurementSystem(1.0, Weight.TONNE);
         Assertions.assertNotEquals(tonne1, tonne2);
     }
 
     @Test
-    void givenType0TonneAnd1Tonne_ShouldReturnEqual() {
+    void given_Type0TonneAnd1Tonne_ShouldReturnEqual() {
         UnitMeasurementSystem tonne1 = new UnitMeasurementSystem(0.0, Weight.TONNE);
         UnitMeasurementSystem tonne2 = new UnitMeasurementSystem(1.0, Weight.TONNE);
         Assertions.assertEquals(tonne1.getClass(), tonne2.getClass());
     }
 
     @Test
-    void given1KilogramAnd1000Gram_WhenCompared_ShouldReturnEqualWeight() {
+    void given_1KilogramAnd1000Gram_WhenCompared_ShouldReturnEqualWeight() {
         UnitMeasurementSystem kilogram = new UnitMeasurementSystem(1.0, Weight.KILOGRAM);
         UnitMeasurementSystem gram = new UnitMeasurementSystem(1000.0, Weight.GRAM);
         boolean compareCheck = kilogram.compare(gram);
@@ -316,7 +316,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1000GramAnd1Kilogram_WhenCompared_ShouldReturnEqualWeight() {
+    void given_1000GramAnd1Kilogram_WhenCompared_ShouldReturnEqualWeight() {
         UnitMeasurementSystem gram = new UnitMeasurementSystem(1000.0, Weight.GRAM);
         UnitMeasurementSystem kilogram = new UnitMeasurementSystem(1.0, Weight.KILOGRAM);
         boolean compareCheck = gram.compare(kilogram);
@@ -324,7 +324,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1TonneAnd1000Kilogram_WhenCompared_ShouldReturnEqualWeight() {
+    void given_1TonneAnd1000Kilogram_WhenCompared_ShouldReturnEqualWeight() {
         UnitMeasurementSystem tonne = new UnitMeasurementSystem(1.0, Weight.TONNE);
         UnitMeasurementSystem kilogram = new UnitMeasurementSystem(1000.0, Weight.KILOGRAM);
         boolean compareCheck = tonne.compare(kilogram);
@@ -332,7 +332,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1000KilogramAnd1Tonne_WhenCompared_ShouldReturnEqualWeight() {
+    void given__1000KilogramAnd1Tonne_WhenCompared_ShouldReturnEqualWeight() {
         UnitMeasurementSystem kilogram = new UnitMeasurementSystem(1000.0, Weight.KILOGRAM);
         UnitMeasurementSystem tonne = new UnitMeasurementSystem(1.0, Weight.TONNE);
         boolean compareCheck = kilogram.compare(tonne);
@@ -340,121 +340,122 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1TonneAnd1000Gram_WhenAdded_ShouldReturn1001Kilogram() {
+    void given__1TonneAnd1000Gram_WhenAdded_ShouldReturn1001Kilogram() {
         UnitMeasurementSystem tonne = new UnitMeasurementSystem(1.0, Weight.TONNE);
         UnitMeasurementSystem gram = new UnitMeasurementSystem(1000.0, Weight.GRAM);
         UnitMeasurementSystem actualValue = tonne.add(gram, Weight.KILOGRAM);
         UnitMeasurementSystem expectedValue = new UnitMeasurementSystem(1001.0, Weight.KILOGRAM);
         Assertions.assertEquals(expectedValue, actualValue);
+
     }
 
     @Test
-    void given0GallonAnd0Gallon_ShouldReturnEqual() {
+    void given_0GallonAnd0Gallon_ShouldReturnEqual() {
         UnitMeasurementSystem gallon1 = new UnitMeasurementSystem(0.0, Volume.GALLON);
         UnitMeasurementSystem gallon2 = new UnitMeasurementSystem(0.0, Volume.GALLON);
         Assertions.assertEquals(gallon1, gallon2);
     }
 
     @Test
-    void givenValue0GallonAnd1Gallon_ShouldReturnNotEqual() {
+    void given_Value0GallonAnd1Gallon_ShouldReturnNotEqual() {
         UnitMeasurementSystem gallon1 = new UnitMeasurementSystem(0.0, Volume.GALLON);
         UnitMeasurementSystem gallon2 = new UnitMeasurementSystem(1.0, Volume.GALLON);
         Assertions.assertNotEquals(gallon1, gallon2);
     }
 
     @Test
-    void given0GallonAndNullGallon_ShouldReturnNotEqual() {
+    void given_0GallonAndNullGallon_ShouldReturnNotEqual() {
         UnitMeasurementSystem gallon1 = new UnitMeasurementSystem(0.0, Volume.GALLON);
         UnitMeasurementSystem gallon2 = null;
         Assertions.assertNotEquals(gallon1, gallon2);
     }
 
     @Test
-    void givenReference0GallonAnd1Gallon_ShouldReturnNotEqual() {
+    void given_Reference0GallonAnd1Gallon_ShouldReturnNotEqual() {
         UnitMeasurementSystem gallon1 = new UnitMeasurementSystem(0.0, Volume.GALLON);
         UnitMeasurementSystem gallon2 = new UnitMeasurementSystem(1.0, Volume.GALLON);
         Assertions.assertNotEquals(gallon1, gallon2);
     }
 
     @Test
-    void givenType0GallonAnd1Gallon_ShouldReturnEqual() {
+    void given_Type0GallonAnd1Gallon_ShouldReturnEqual() {
         UnitMeasurementSystem gallon1 = new UnitMeasurementSystem(0.0, Volume.GALLON);
         UnitMeasurementSystem gallon2 = new UnitMeasurementSystem(1.0, Volume.GALLON);
         Assertions.assertEquals(gallon1.getClass(), gallon2.getClass());
     }
 
     @Test
-    void given0LitreAnd0Litre_ShouldReturnEqual() {
+    void given_0LitreAnd0Litre_ShouldReturnEqual() {
         UnitMeasurementSystem litre1 = new UnitMeasurementSystem(0.0, Volume.LITRE);
         UnitMeasurementSystem litre2 = new UnitMeasurementSystem(0.0, Volume.LITRE);
         Assertions.assertEquals(litre1, litre2);
     }
 
     @Test
-    void givenValue0LitreAnd1Litre_ShouldReturnNotEqual() {
+    void given_Value0LitreAnd1Litre_ShouldReturnNotEqual() {
         UnitMeasurementSystem litre1 = new UnitMeasurementSystem(0.0, Volume.LITRE);
         UnitMeasurementSystem litre2 = new UnitMeasurementSystem(1.0, Volume.LITRE);
         Assertions.assertNotEquals(litre1, litre2);
     }
 
     @Test
-    void given0LitreAndNullLitre_ShouldReturnNotEqual() {
+    void given_0LitreAndNullLitre_ShouldReturnNotEqual() {
         UnitMeasurementSystem litre1 = new UnitMeasurementSystem(0.0, Volume.LITRE);
         UnitMeasurementSystem litre2 = null;
         Assertions.assertNotEquals(litre1, litre2);
     }
 
     @Test
-    void givenReference0LitreAnd1Litre_ShouldReturnNotEqual() {
+    void given_Reference0LitreAnd1Litre_ShouldReturnNotEqual() {
         UnitMeasurementSystem litre1 = new UnitMeasurementSystem(0.0, Volume.LITRE);
         UnitMeasurementSystem litre2 = new UnitMeasurementSystem(1.0, Volume.LITRE);
         Assertions.assertNotEquals(litre1, litre2);
     }
 
     @Test
-    void givenType0LitreAnd1Litre_ShouldReturnEqual() {
+    void given_Type0LitreAnd1Litre_ShouldReturnEqual() {
         UnitMeasurementSystem litre1 = new UnitMeasurementSystem(0.0, Volume.LITRE);
         UnitMeasurementSystem litre2 = new UnitMeasurementSystem(1.0, Volume.LITRE);
         Assertions.assertEquals(litre1.getClass(), litre2.getClass());
     }
 
     @Test
-    void given0MillilitreAnd0Millilitre_ShouldReturnEqual() {
+    void given_0MillilitreAnd0Millilitre_ShouldReturnEqual() {
         UnitMeasurementSystem millilitre1 = new UnitMeasurementSystem(0.0, Volume.MILLILITRE);
         UnitMeasurementSystem millilitre2 = new UnitMeasurementSystem(0.0, Volume.MILLILITRE);
         Assertions.assertEquals(millilitre1, millilitre2);
     }
 
     @Test
-    void givenValue0MillilitreAnd1Millilitre_ShouldReturnNotEqual() {
+    void given_Value0MillilitreAnd1Millilitre_ShouldReturnNotEqual() {
         UnitMeasurementSystem millilitre1 = new UnitMeasurementSystem(0.0, Volume.MILLILITRE);
         UnitMeasurementSystem millilitre2 = new UnitMeasurementSystem(1.0, Volume.MILLILITRE);
         Assertions.assertNotEquals(millilitre1, millilitre2);
     }
 
     @Test
-    void given0MillilitreAndNullMillilitre_ShouldReturnNotEqual() {
+    void given_0MillilitreAndNullMillilitre_ShouldReturnNotEqual() {
         UnitMeasurementSystem millilitre1 = new UnitMeasurementSystem(0.0, Volume.MILLILITRE);
         UnitMeasurementSystem millilitre2 = null;
         Assertions.assertNotEquals(millilitre1, millilitre2);
     }
 
     @Test
-    void givenReference0MillilitreAnd1Millilitre_ShouldReturnNotEqual() {
+    void given_Reference0MillilitreAnd1Millilitre_ShouldReturnNotEqual() {
         UnitMeasurementSystem millilitre1 = new UnitMeasurementSystem(0.0, Volume.MILLILITRE);
         UnitMeasurementSystem millilitre2 = new UnitMeasurementSystem(1.0, Volume.MILLILITRE);
         Assertions.assertNotEquals(millilitre1, millilitre2);
     }
 
     @Test
-    void givenType0MillilitreAnd1Millilitre_ShouldReturnEqual() {
+    void given_Type0MillilitreAnd1Millilitre_ShouldReturnEqual() {
         UnitMeasurementSystem millilitre1 = new UnitMeasurementSystem(0.0, Volume.MILLILITRE);
         UnitMeasurementSystem millilitre2 = new UnitMeasurementSystem(1.0, Volume.MILLILITRE);
         Assertions.assertEquals(millilitre1.getClass(), millilitre2.getClass());
     }
 
     @Test
-    void given0GallonAnd0Litre_WhenCompared_ShouldReturnEqualVolume() {
+    void given_0GallonAnd0Litre_WhenCompared_ShouldReturnEqualVolume() {
         UnitMeasurementSystem gallon = new UnitMeasurementSystem(0.0, Volume.GALLON);
         UnitMeasurementSystem litre = new UnitMeasurementSystem(0.0, Volume.LITRE);
         boolean compareCheck = gallon.compare(litre);
@@ -462,7 +463,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given0GallonAnd1Litre_WhenCompared_ShouldReturnNotEqualVolume() {
+    void given_0GallonAnd1Litre_WhenCompared_ShouldReturnNotEqualVolume() {
         UnitMeasurementSystem gallon = new UnitMeasurementSystem(0.0, Volume.GALLON);
         UnitMeasurementSystem litre = new UnitMeasurementSystem(1.0, Volume.LITRE);
         boolean compareCheck = gallon.compare(litre);
@@ -470,7 +471,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1GallonAnd3Point78Litre_WhenCompared_ShouldReturnEqualVolume() {
+    void given_1GallonAnd3Point78Litre_WhenCompared_ShouldReturnEqualVolume() {
         UnitMeasurementSystem gallon = new UnitMeasurementSystem(1.0, Volume.GALLON);
         UnitMeasurementSystem litre = new UnitMeasurementSystem(3.78, Volume.LITRE);
         boolean compareCheck = gallon.compare(litre);
@@ -478,7 +479,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given3Point78LitreAnd1Gallon_WhenCompared_ShouldReturnEqualVolume() {
+    void given_3Point78LitreAnd1Gallon_WhenCompared_ShouldReturnEqualVolume() {
         UnitMeasurementSystem litre = new UnitMeasurementSystem(3.78, Volume.LITRE);
         UnitMeasurementSystem gallon = new UnitMeasurementSystem(1.0, Volume.GALLON);
         boolean compareCheck = litre.compare(gallon);
@@ -486,7 +487,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given0LitreAnd0Millilitre_WhenCompared_ShouldReturnEqualVolume() {
+    void given_0LitreAnd0Millilitre_WhenCompared_ShouldReturnEqualVolume() {
         UnitMeasurementSystem litre = new UnitMeasurementSystem(0.0, Volume.LITRE);
         UnitMeasurementSystem millilitre = new UnitMeasurementSystem(0.0, Volume.MILLILITRE);
         boolean compareCheck = litre.compare(millilitre);
@@ -494,7 +495,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1LitreAnd1000Millilitre_WhenCompared_ShouldReturnEqualVolume() {
+    void given_1LitreAnd1000Millilitre_WhenCompared_ShouldReturnEqualVolume() {
         UnitMeasurementSystem litre = new UnitMeasurementSystem(1.0, Volume.LITRE);
         UnitMeasurementSystem millilitre = new UnitMeasurementSystem(1000.0, Volume.MILLILITRE);
         boolean compareCheck = litre.compare(millilitre);
@@ -502,7 +503,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1000MillilitreAnd1Litre_WhenCompared_ShouldReturnEqualVolume() {
+    void given_1000MillilitreAnd1Litre_WhenCompared_ShouldReturnEqualVolume() {
         UnitMeasurementSystem millilitre = new UnitMeasurementSystem(1000.0, Volume.MILLILITRE);
         UnitMeasurementSystem litre = new UnitMeasurementSystem(1.0, Volume.LITRE);
         boolean compareCheck = millilitre.compare(litre);
@@ -510,7 +511,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1GallonAnd3Point78Litre_WhenAdded_ShouldReturn7Point57Litre() {
+    void given_1GallonAnd3Point78Litre_WhenAdded_ShouldReturn7Point57Litre() {
         UnitMeasurementSystem gallon = new UnitMeasurementSystem(1.0, Volume.GALLON);
         UnitMeasurementSystem litre = new UnitMeasurementSystem(3.78, Volume.LITRE);
         UnitMeasurementSystem actualValue = gallon.add(litre, Volume.LITRE);
@@ -519,11 +520,53 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1LitreAnd1000Millilitre_WhenAdded_ShouldReturn2Litre() {
+    void given_1LitreAnd1000Millilitre_WhenAdded_ShouldReturn2Litre() {
         UnitMeasurementSystem litre = new UnitMeasurementSystem(1.0, Volume.LITRE);
         UnitMeasurementSystem millilitre = new UnitMeasurementSystem(1000.0, Volume.MILLILITRE);
         UnitMeasurementSystem actualValue = litre.add(millilitre, Volume.LITRE);
         UnitMeasurementSystem expectedValue = new UnitMeasurementSystem(2.0, Volume.LITRE);
         Assertions.assertEquals(expectedValue, actualValue);
+    }
+    @Test
+    void given_0FahrenheitAnd0Fahrenheit_ShouldReturnEqual() {
+        UnitMeasurementSystem fahrenheit1 = new UnitMeasurementSystem(0.0, Temperature.FAHRENHEIT);
+        UnitMeasurementSystem fahrenheit2 = new UnitMeasurementSystem(0.0, Temperature.FAHRENHEIT);
+        Assertions.assertEquals(fahrenheit1, fahrenheit2);
+    }
+
+    @Test
+    void given_Value0FahrenheitAnd1Fahrenheit_ShouldReturnNotEqual() {
+        UnitMeasurementSystem fahrenheit1 = new UnitMeasurementSystem(0.0, Temperature.FAHRENHEIT);
+        UnitMeasurementSystem fahrenheit2 = new UnitMeasurementSystem(1.0, Temperature.FAHRENHEIT);
+        Assertions.assertNotEquals(fahrenheit1, fahrenheit2);
+    }
+
+    @Test
+    void given_0FahrenheitAndNullFahrenheit_ShouldReturnNotEqual() {
+        UnitMeasurementSystem fahrenheit1 = new UnitMeasurementSystem(0.0, Temperature.FAHRENHEIT);
+        UnitMeasurementSystem fahrenheit2 = null;
+        Assertions.assertNotEquals(fahrenheit1, fahrenheit2);
+    }
+
+    @Test
+    void given_Reference0FahrenheitAnd1Fahrenheit_ShouldReturnNotEqual() {
+        UnitMeasurementSystem fahrenheit1 = new UnitMeasurementSystem(0.0, Temperature.FAHRENHEIT);
+        UnitMeasurementSystem fahrenheit2 = new UnitMeasurementSystem(1.0, Temperature.FAHRENHEIT);
+        Assertions.assertNotEquals(fahrenheit1, fahrenheit2);
+    }
+
+    @Test
+    void given_Type0FahrenheitAnd1Fahrenheit_ShouldReturnEqual() {
+        UnitMeasurementSystem fahrenheit1 = new UnitMeasurementSystem(0.0, Temperature.FAHRENHEIT);
+        UnitMeasurementSystem fahrenheit2 = new UnitMeasurementSystem(1.0, Temperature.FAHRENHEIT);
+        Assertions.assertEquals(fahrenheit1.getClass(), fahrenheit2.getClass());
+    }
+
+    @Test
+    void given_212FahrenheitAnd100Celsius_WhenCompared_ShouldReturnEqualTemperature() {
+        UnitMeasurementSystem fahrenheit = new UnitMeasurementSystem(212.0, Temperature.FAHRENHEIT);
+        UnitMeasurementSystem celsius = new UnitMeasurementSystem(100.0, Temperature.CELSIUS);
+        boolean compareCheck = fahrenheit.compare(celsius);
+        Assertions.assertTrue(compareCheck);
     }
 }
